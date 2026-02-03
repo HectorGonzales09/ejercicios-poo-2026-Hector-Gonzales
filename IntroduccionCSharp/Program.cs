@@ -1,53 +1,71 @@
 ﻿using IntroduccionCSharp.Ejemplos;
 
+Console.WriteLine("ingrese el tamaño del arreglo:");
+int tamaño = int.Parse(Console.ReadLine());
+Arreglos arreglos = new Arreglos(tamaño);
 
-Calculadora calculadora = new Calculadora();
+// TAREA para mañana
 
-Console.WriteLine("==== SUMAR ====");
-Console.WriteLine("");
+//TODO: Solo ingresar valores positivos, mayor a 0, si no es mayor solicitar el numero de nuevo
 
-string operación = "";
-int n1 = 0;
-int n2 = 0;
+// Menu: 
+// 1.Crear el Arreglo
+// 2.Ingresar un valor en el arreglo
+// 3.Imprimir el arreglo
+// 4.Salir
 
-try
-{
-    Console.WriteLine("Que operacion quiere realizar se permite (+, -, *, ÷)");
-    operación = Console.ReadLine();
+// Hacer un do white
+// Posible necesidad de validaciones 
 
-    Console.WriteLine("Ingrese el primer numero");
-    n1 = int.Parse(Console.ReadLine());
-    Console.WriteLine("Ingrese el segundo numero"); //Estos son parametros 
-    n2 = int.Parse(Console.ReadLine());
-}
-catch
-{
-    Console.WriteLine("Error de formato en el texto ingresado.");
-}
 
-int resultado = 0;
 
-switch (operación)
-{
-    case "+":
-        resultado = calculadora.Sumar(n1, n2);
-        break;
-    case "-":
-        resultado = calculadora.Restar(n1, n2);
-        break;
-    case "*":
-        resultado = calculadora.Multiplicar(n1, n2);
-        break;
-    case "÷":
-        resultado = calculadora.Dividir(n1, n2);
-        break;
+//Calculadora calculadora = new Calculadora();
 
-    default:
-    throw new Exception("No ingreso una operación valida");
+//Console.WriteLine("==== SUMAR ====");
+//Console.WriteLine("");
+
+//string operación = "";
+//int n1 = 0;
+//int n2 = 0;
+
+//try
+//{
+//    Console.WriteLine("Que operacion quiere realizar se permite (+, -, *, ÷)");
+//    operación = Console.ReadLine();
+//
+//    Console.WriteLine("Ingrese el primer numero");
+//    n1 = int.Parse(Console.ReadLine());
+//    Console.WriteLine("Ingrese el segundo numero"); //Estos son parametros 
+//    n2 = int.Parse(Console.ReadLine());
+//}
+//catch
+//{
+//    Console.WriteLine("Error de formato en el texto ingresado.");
+//}
+
+//int resultado = 0;
+
+//switch (operación)
+//{
+//    case "+":
+//        resultado = calculadora.Sumar(n1, n2);
+//        break;
+//    case "-":
+//        resultado = calculadora.Restar(n1, n2);
+//        break;
+//    case "*":
+//        resultado = calculadora.Multiplicar(n1, n2);
+//        break;
+//    case "÷":
+//        resultado = calculadora.Dividir(n1, n2);
+//        break;
+
+//    default:
+//    throw new Exception("No ingreso una operación valida");
     
-}
+//}
 
-Console.WriteLine("El resultado es: " + resultado);
+//Console.WriteLine("El resultado es: " + resultado);
 
 //Calculadora calculadora2 = new Calculadora();
 //Calculadora calculadora3 = new Calculadora();
